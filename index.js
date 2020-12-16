@@ -163,3 +163,17 @@ console.log(spreadObj)
 
 const objClone = {...obj}
 console.log(objClone)
+
+// Class
+
+class Personally {
+    constructor(name) {
+    this.name = name;
+    }
+    walk() {
+        console.log("walk");
+    }
+}
+
+const pname = new Personally("Aditya");
+console.log(pname.walk())
