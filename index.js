@@ -176,4 +176,12 @@ class Personally {
 }
 
 const pname = new Personally("Aditya");
-console.log(pname.walk())
+console.log(pname.name)
+
+// Inheritance
+
+class Teacher extends Personally {
+
+}
+const teacherName = new Teacher('Adi')
+teacherName.walk()
