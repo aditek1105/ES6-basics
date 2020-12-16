@@ -181,7 +181,16 @@ console.log(pname.name)
 // Inheritance
 
 class Teacher extends Personally {
+    constructor(name,degree) {
+        super(name);
+        this.degree = degree;
+    }
 
 }
 const teacherName = new Teacher('Adi')
 teacherName.walk()
+
+const teacherDetails = new Teacher('Tekur','MS');
+console.log(teacherDetails.degree)
+console.log(teacherDetails.name)
+teacherDetails.walk()
