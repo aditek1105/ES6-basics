@@ -140,3 +140,26 @@ const {street, state, country} = address
 // incase you need an alias name that needs to be used, one can do
 const {street:st, state: sta, country:c} = address
 // you can use st, sta and c now as they are equivalent to const st = address.street; const sta = address.state and so on... 
+
+
+//spread operator
+
+const arr1 = [1,2,3]
+const arr2 = [4,5,6]
+
+const arr3 = arr1.concat(arr2) // a
+console.log(arr3)
+
+const arr13 = [...arr1,...arr2] // same as step a
+console.log(arr13)
+
+const obj = {
+    name:'Aditya',
+    gender: 'Male'
+}
+
+const spreadObj = {...obj,location:'USA'}
+console.log(spreadObj)
+
+const objClone = {...obj}
+console.log(objClone)
