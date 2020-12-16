@@ -98,5 +98,45 @@ borrow()
          },1000)
      }
  }
-
  p.test()
+
+ // to get the reference to the person object we use arrow function as they dont rebind the this keyword
+ const p1 = {
+     run() {
+     setTimeout(() => {
+         console.log("this",this);
+     }, 1000);
+ }
+}
+p1.run()
+
+//Array.map is used to render list of items and is frequently used in react. 
+const colors = ['red','green','blue'];
+let items = colors.map(function(color) {
+    return '<p>'+color+'</p>'
+})
+console.log(items.filter(colors => colors))
+
+//items can further be shortened and can use arrow function
+items = colors.map(color => '<p>'+color+'</p>');
+console.log(items);
+
+//object destructuring
+const address = {
+    street: '',
+    state: '',
+    country: ''
+}
+
+//1)
+// const street = address.street;
+// const state = address.state;
+// const country = address.country;
+
+// The above code is some form of repetition of the address object, in order to remove that we use object destructuring
+
+const {street, state, country} = address
+// with this line of code, it is no more necessary to do 1)
+// incase you need an alias name that needs to be used, one can do
+const {street:st, state: sta, country:c} = address
+// you can use st, sta and c now as they are equivalent to const st = address.street; const sta = address.state and so on... 
