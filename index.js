@@ -194,3 +194,7 @@ const teacherDetails = new Teacher('Tekur','MS');
 console.log(teacherDetails.degree)
 console.log(teacherDetails.name)
 teacherDetails.walk()
+
+// Modules
+
+
